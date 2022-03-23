@@ -12,23 +12,17 @@ public class FiguraL{
     var ancho:Double
     var x:Double
     var y:Double
-    var a:Double{
-        get {
-            return ancho - x
-        }
-    }
     
-    var b:Double{
-        get {
-            return alto - y
-        }
-    }
+    var a:Double
+    var b:Double
     
     init(_ alto:Double,_ ancho:Double,_ x:Double,_ y:Double){
         self.alto = alto;
         self.ancho = ancho;
         self.x = x;
         self.y = y;
+        self.a = ancho - x
+        self.b = alto - y
     }
     
     func calcularPerimetro() -> Double {
