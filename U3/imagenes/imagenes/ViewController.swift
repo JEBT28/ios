@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgSelected: UIImageView!
     @IBOutlet weak var lblPromedio: UILabel!
     
+    @IBOutlet weak var lblSwitch: UILabel!
     @IBAction func valueChanged(_ sender: UISegmentedControl) {
         
         lblSelected.text = "Seleccionada: \(sender.titleForSegment(at:sender.selectedSegmentIndex)!)"
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
 
         break
         default :
-            imgSelected.image = UIImage();
+            imgSelected.cargarImagen("https://images.unsplash.com/photo-1648405680499-ab4153bc7be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80");
 
         break
         }
@@ -42,6 +43,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         stepperValueChange(stpSemestre);
+        //imgSelected.cargarImagen("https://images.unsplash.com/photo-1648405680499-ab4153bc7be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80")
+        imgSelected.image = UIImage.init("https://images.unsplash.com/photo-1648405680499-ab4153bc7be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80")
     }
 
     @IBAction func stepperValueChange(_ sender: UIStepper) {
@@ -49,7 +52,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderValueChange(_ sender: UISlider) {
-        lblPromedio.text="Promedio: \(String(format:"%.2f",sender.value))"
+        lblPromedio.text="Promedio: \(sender.value.redondear(0))"
+    }
+    @IBAction func switchValueChange(_ sender: UISwitch) {
+        
+        lblSwitch.text = sender.isOn ? "Es industrial" : "No es industrial"
     }
 }
+
+
 
