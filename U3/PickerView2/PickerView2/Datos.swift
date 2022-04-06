@@ -14,6 +14,11 @@ let arreglo = [
     ["B","C","D"]
 ]
 
-let colores = ["Blanco","Verde","Azul","Amarillo","Rojo"]
+let nomColores = ["Blanco","Verde","Azul","Amarillo","Rojo"]
 
-let colores2 = [UIColor.white, UIColor.green, UIColor.blue, UIColor.yellow, UIColor.red]
+let colores = [(nombre:"Blanco",color:UIColor.white),
+               (nombre:"Rojo",color:UIColor.red),
+                (nombre:"Azul",color:UIColor.blue),
+                (nombre:"Amarillo",color:UIColor.yellow),
+                (nombre:"Verde",color:UIColor.green),
+               (nombre:"Morado",color:UIColor(red:(123/255),green:(69/255),blue:(170/255),alpha:(150/255)))]
