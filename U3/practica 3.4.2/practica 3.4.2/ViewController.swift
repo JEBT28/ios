@@ -266,23 +266,20 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         case "Rombo" :
 
             alert.addTextField{
-                (txtDMayor) in txtDMayor.placeholder = "Diagonal Mayor"
+                (txtLado) in txtLado.placeholder = "Lado"
             }
 
-            alert.addTextField{
-                (txtDMenor) in txtDMenor.placeholder = "Diagonal Menor"
-            }
+         
 
             let btnCalcular = UIAlertAction(title: "Calcular" , style: .default){
                 _ in
-                let mayor = Double(alert.textFields?[0].text ?? "0.0")!
-                let menor = Double(alert.textFields?[1].text ?? "0.0")!
+                let lado = Double(alert.textFields?[0].text ?? "0.0")!
 
-                let rombo = Rombo(mayor,menor)
+                let rombo = Rombo(lado)
 
                 let perimetro = rombo.calcularPerimetro()
 
-                self.lblResultado.text = "Diagonal Mayor: \(mayor) Diagonal Menor: \(menor)\nPerimetro: \(perimetro)"
+                self.lblResultado.text = "Lado: \(lado)\nPerimetro: \(perimetro)"
             }
 
             alert.addAction(btnCalcular)

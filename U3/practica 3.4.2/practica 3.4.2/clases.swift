@@ -142,7 +142,11 @@ class Rombo:Figura{
     var dMayor: Double!
     var dMenor: Double!
     var altura: Double!
+    var lado : Double!
     
+    init(_ lado:Double){
+        self.lado = lado
+    }
     init(_ dMayor:Double, _ dMenor: Double){
         self.dMayor = dMayor
         self.dMenor = dMenor
@@ -154,7 +158,7 @@ class Rombo:Figura{
     }
     
     func calcularArea() -> Double {
-        return dMenor * dMayor;
+        return (dMenor * dMayor) / 2;
     }
     
     func calcularVolumen() -> Double {
@@ -162,6 +166,6 @@ class Rombo:Figura{
     }
     
     func calcularPerimetro() -> Double {
-        return sqrt(pow(dMayor,2) + pow(dMenor, 2))
+        return lado * 4 
     }
 }
