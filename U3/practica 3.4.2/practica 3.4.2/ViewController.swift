@@ -426,7 +426,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
                 let menor = Double(alert.textFields?[1].text ?? "0.0")!
                 let altura = Double(alert.textFields?[2].text ?? "0.0")!
 
-                let rombo = Rombo(mayor,menor)
+                let rombo = Rombo(mayor,menor,altura)
 
                 let volumen = rombo.calcularVolumen()
 
