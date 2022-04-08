@@ -96,7 +96,7 @@ class Rectangulo:Figura {
     }
     
     func calcularPerimetro() -> Double {
-        return (largo * 2) * (ancho * 2)
+        return (largo * 2) + (ancho * 2)
     }
 }
 
