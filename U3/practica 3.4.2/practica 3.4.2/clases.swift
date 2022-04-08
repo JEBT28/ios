@@ -162,7 +162,7 @@ class Rombo:Figura{
     }
     
     func calcularVolumen() -> Double {
-        return (dMenor * dMayor) * altura
+        return ((dMenor * dMayor)/2) * altura
     }
     
     func calcularPerimetro() -> Double {
