@@ -107,11 +107,11 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         case "Rectangulo" :
 
             alert.addTextField{
-                (txtLargo) in txtBase.placeholder = "Largo"
+                (txtLargo) in txtLargo.placeholder = "Largo"
             }
 
             alert.addTextField{
-                (txtAncho) in txtAltura.placeholder = "Ancho"
+                (txtAncho) in txtAncho.placeholder = "Ancho"
             }
 
             let btnCalcular = UIAlertAction(title: "Calcular" , style: .default){
@@ -188,7 +188,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
                 let lado1 = Double(alert.textFields?[1].text ?? "0.0")!
                 let lado2 = Double(alert.textFields?[2].text ?? "0.0")!
 
-                let triangulo = Triangulo(base,lado1,lado2)
+                let triangulo = Triangulo(base,lado1:lado1,lado2:lado2)
 
                 let perimetro = triangulo.calcularPerimetro()
 
@@ -241,11 +241,11 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         case "Rectangulo" :
 
             alert.addTextField{
-                (txtLargo) in txtBase.placeholder = "Largo"
+                (txtLargo) in txtLargo.placeholder = "Largo"
             }
 
             alert.addTextField{
-                (txtAncho) in txtAltura.placeholder = "Ancho"
+                (txtAncho) in txtAncho.placeholder = "Ancho"
             }
 
             let btnCalcular = UIAlertAction(title: "Calcular" , style: .default){
@@ -323,7 +323,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
                 let altura = Double(alert.textFields?[1].text ?? "0.0")!
                 let largo = Double(alert.textFields?[2].text ?? "0.0")!
 
-                let triangulo = Triangulo(base,altura,largo)
+                let triangulo = Triangulo(base,altura:altura,largo:largo)
 
                 let volumen = triangulo.calcularVolumen()
 
@@ -348,7 +348,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
 
                 let circulo = Circulo(radio,altura)
 
-                let area = circulo.calcularVolumen()
+                let volumen = circulo.calcularVolumen()
 
                 self.lblResultado.text = "Radio: \(radio) Altura: \(altura)\nVolumen: \(volumen)"
             }
@@ -383,11 +383,11 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         case "Rectangulo" :
 
             alert.addTextField{
-                (txtLargo) in txtBase.placeholder = "Largo"
+                (txtLargo) in txtLargo.placeholder = "Largo"
             }
 
             alert.addTextField{
-                (txtAncho) in txtAltura.placeholder = "Ancho"
+                (txtAncho) in txtAncho.placeholder = "Ancho"
             }
              alert.addTextField{
                 (txtAltura) in txtAltura.placeholder = "Altura"
